@@ -1,4 +1,4 @@
-from flask import Flask 
+from flask import Flask , Response
 app = Flask(__name__)
 
 @app.route('/saludar')
@@ -15,11 +15,15 @@ def hola_html():
 
 @app.route('/json')
 def algo():
-  return '{"Nombre":"john"}'
+  return Response('{"Nombre":"john"}', minetype='application/json')
 
 @app.route('/xml')
 def xml():
-  return '<?xml version="1.0"?> <nombre>john</nombre>'
+  return '''<?xml version="1.0"?> 
+  <persona>
+  <nombre>john</nombre>
+  </persona>'''
+  return Response(xml, mimetype='application/xml')
 
 if __name__== "__main__":
   app.run(host='0.0.0.0', debug=True)

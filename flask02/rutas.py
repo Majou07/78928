@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def inicio():
-  productos = [Producto("Manzanas", 12), Producto("Pera", 13)]
-  return render_template('index.hmtl', xxx=productos)
+  productos = [Producto("Manzanas", 12), Producto("Peras", 13)]
+  return render_template('index.html', xxx=productos)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
