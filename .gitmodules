@@ -22,3 +22,6 @@
 [submodule "MQTT"]
 	path = MQTT
 	url = https://github.com/Majou07/MQTT.git
+[submodule "PROYECTO-MQTT---ANGULAR"]
+	path = PROYECTO-MQTT---ANGULAR
+	url = https://github.com/Majou07/PROYECTO-MQTT---ANGULAR.git
